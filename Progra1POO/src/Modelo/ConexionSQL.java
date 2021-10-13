@@ -24,7 +24,7 @@ public class ConexionSQL {
     //Funcion que realiza la conexion con la base de datos 
     public static Connection getConexion() {
         status = false;
-        String url = "jdbc:sqlserver://Valeria-Martinez:1433;databaseName=Progra1"; //cambiar nombre del hostname de la computadora para que funcione 
+        String url = "jdbc:sqlserver://Valeria-Martinez:1433;databaseName=Progra1POO"; //cambiar nombre del hostname de la computadora para que funcione 
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
