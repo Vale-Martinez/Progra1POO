@@ -66,12 +66,27 @@ public class Menu extends javax.swing.JFrame {
         Registar.add(RegistrarPlanEstudio);
 
         RegistarBloque.setText("Registar Bloque");
+        RegistarBloque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistarBloqueActionPerformed(evt);
+            }
+        });
         Registar.add(RegistarBloque);
 
         RegistarCurso.setLabel("Registar Curso");
+        RegistarCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistarCursoActionPerformed(evt);
+            }
+        });
         Registar.add(RegistarCurso);
 
         RegistarReqCo.setLabel("Registar Requisitos o Correquisitos");
+        RegistarReqCo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistarReqCoActionPerformed(evt);
+            }
+        });
         Registar.add(RegistarReqCo);
 
         jMenuBar1.add(Registar);
@@ -151,12 +166,29 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void RegistrarPlanEstudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarPlanEstudioActionPerformed
-        // TODO add your handling code here:
+       Controlador.ConMenu.AbrirResgistroPlanEstudio();
+       this.dispose();
     }//GEN-LAST:event_RegistrarPlanEstudioActionPerformed
 
     private void RegistarEscuelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarEscuelaActionPerformed
-        
+        Controlador.ConMenu.AbrirResgistroEscuela();
+        this.dispose();
     }//GEN-LAST:event_RegistarEscuelaActionPerformed
+
+    private void RegistarBloqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarBloqueActionPerformed
+       Controlador.ConMenu.AbrirResgistroBloque();
+       this.dispose();
+    }//GEN-LAST:event_RegistarBloqueActionPerformed
+
+    private void RegistarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarCursoActionPerformed
+       Controlador.ConMenu.AbrirResgistroCurso();
+       this.dispose();
+    }//GEN-LAST:event_RegistarCursoActionPerformed
+
+    private void RegistarReqCoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarReqCoActionPerformed
+        Controlador.ConMenu.AbrirResgistroReqCo();
+        this.dispose();
+    }//GEN-LAST:event_RegistarReqCoActionPerformed
 
  
     /**

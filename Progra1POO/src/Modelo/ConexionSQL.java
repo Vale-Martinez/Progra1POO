@@ -1,6 +1,5 @@
 package Modelo;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -40,8 +39,7 @@ public class ConexionSQL {
         }
         return contacto;
     }
-    
-    
+
     //funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
     //todas las filas que cumplan con esa consulta, si algo sale mal retona null
     public static ResultSet consulta(String consulta) {
@@ -55,5 +53,24 @@ public class ConexionSQL {
             JOptionPane.showMessageDialog(null, "Error" + e.getMessage(), "Error conexion ", JOptionPane.ERROR_MESSAGE);
         }
         return null;
+    }
+
+    //funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
+    //todas las filas que cumplan con esa consulta, si algo sale mal retona null
+    public static void consultaRegistar(String consulta) {
+        Connection con = getConexion();
+        Statement declara;
+        try {
+            
+            PreparedStatement prepsInsertProduct = con.prepareStatement(consulta, Statement.RETURN_GENERATED_KEYS);
+            prepsInsertProduct.execute();
+            
+//            declara = con.createStatement();
+//            ResultSet respuesta = declara.executeQuery(consulta);
+            JOptionPane.showMessageDialog(null, "Los datos han sido agregados correctamente");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error" + e.getMessage(), "Error conexion ", JOptionPane.ERROR_MESSAGE);
+        }
+
     }
 }

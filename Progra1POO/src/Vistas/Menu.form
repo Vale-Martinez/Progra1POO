@@ -29,16 +29,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Registar Bloque"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistarBloqueActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="RegistarCurso">
               <Properties>
                 <Property name="label" type="java.lang.String" value="Registar Curso"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistarCursoActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="RegistarReqCo">
               <Properties>
                 <Property name="label" type="java.lang.String" value="Registar Requisitos o Correquisitos"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistarReqCoActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

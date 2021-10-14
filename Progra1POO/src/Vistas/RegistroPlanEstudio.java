@@ -167,6 +167,7 @@ public class RegistroPlanEstudio extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         //llama a la funcion en controlador
+        Controlador.ConRegistroPlanEstudio.Regresar();
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
