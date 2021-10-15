@@ -175,7 +175,7 @@ public class RegistroPlanEstudio extends javax.swing.JFrame {
             txtNumero.setText("");
             txtfecha.setText("");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Por favor revise los datos que ingreso");
+            JOptionPane.showMessageDialog(null, "Por favor revise los datos ingresados.");
         }
 
 

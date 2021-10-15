@@ -63,9 +63,9 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnRegistar" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtfecha" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
+                  <Component id="txtNombre" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
                   <Component id="txtNumero" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
-                  <Component id="txtCodEscuela" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
+                  <Component id="txtCodPlan" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -84,7 +84,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" max="-2" attributes="0"/>
-                  <Component id="txtCodEscuela" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCodPlan" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -93,7 +93,7 @@
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtfecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -132,7 +132,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCodEscuela">
+    <Component class="javax.swing.JTextField" name="txtCodPlan">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="14" style="0"/>
@@ -154,7 +154,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtfecha">
+    <Component class="javax.swing.JTextField" name="txtNombre">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="14" style="0"/>

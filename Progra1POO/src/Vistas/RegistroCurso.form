@@ -77,7 +77,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtCodigo" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
                           <Component id="txtNombreC" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
-                          <Component id="txtCodEscuela" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
+                          <Component id="txtNumBloque" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
                           <Component id="CBCreditos" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
                           <Component id="CBHorasLectivas" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
                           <Component id="btnRegistar" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -96,7 +96,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" max="-2" attributes="0"/>
-                  <Component id="txtCodEscuela" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNumBloque" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -156,7 +156,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCodEscuela">
+    <Component class="javax.swing.JTextField" name="txtNumBloque">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="14" style="0"/>
