@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Modelo/Escuela.java</file>
-            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Modelo/PlanEstudio.java</file>
-            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Modelo/Bloque.java</file>
-            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/progra1poo/Progra1POO.java</file>
-            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Modelo/Curso.java</file>
+            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Controlador/ConMenu.java</file>
+            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Controlador/ConRegistroPlanEstudio.java</file>
+            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Vistas/RegistroEscuela.java</file>
+            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Vistas/RegistroPlanEstudio.java</file>
+            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Vistas/Menu.java</file>
+            <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Controlador/ConRegistroEscuela.java</file>
             <file>file:/C:/Users/valem/Desktop/TEC/2021/POO%20proyectos/Progra1POO/Progra1POO/src/Modelo/ConexionSQL.java</file>
         </group>
     </open-files>
