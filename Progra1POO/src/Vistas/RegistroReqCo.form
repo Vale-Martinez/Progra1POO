@@ -63,8 +63,8 @@
                       </Group>
                       <EmptySpace pref="203" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtCodigo" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
-                          <Component id="txtCodEscuela" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
+                          <Component id="txtCodigoCurso" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
+                          <Component id="txtCodPlan" alignment="1" min="-2" pref="251" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -95,11 +95,11 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" max="-2" attributes="0"/>
-                  <Component id="txtCodEscuela" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCodPlan" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCodigoCurso" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -130,11 +130,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="C&#xf3;digo Escuela:"/>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo Plan:"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCodEscuela">
+    <Component class="javax.swing.JTextField" name="txtCodPlan">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="14" style="0"/>
@@ -157,7 +157,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCodigo">
+    <Component class="javax.swing.JTextField" name="txtCodigoCurso">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="14" style="0"/>

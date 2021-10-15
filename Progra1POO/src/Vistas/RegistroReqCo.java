@@ -1,5 +1,8 @@
 package Vistas;
 
+import java.sql.Date;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author valem
@@ -22,10 +25,10 @@ public class RegistroReqCo extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtCodEscuela = new javax.swing.JTextField();
+        txtCodPlan = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtCodigo = new javax.swing.JTextField();
+        txtCodigoCurso = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         txtCodigoReq = new javax.swing.JTextField();
@@ -47,10 +50,10 @@ public class RegistroReqCo extends javax.swing.JFrame {
         jLabel1.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
-        jLabel2.setText("Código Escuela:");
+        jLabel2.setText("Código Plan:");
         jLabel2.setToolTipText("");
 
-        txtCodEscuela.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
+        txtCodPlan.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
 
@@ -58,7 +61,7 @@ public class RegistroReqCo extends javax.swing.JFrame {
         jLabel5.setText("Código del Curso:");
         jLabel5.setToolTipText("");
 
-        txtCodigo.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
+        txtCodigoCurso.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Requisito del Curso", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Leelawadee UI Semilight", 0, 14))); // NOI18N
 
@@ -187,8 +190,8 @@ public class RegistroReqCo extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCodigo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCodEscuela, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCodigoCurso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCodPlan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,10 +213,10 @@ public class RegistroReqCo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtCodEscuela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodPlan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(4, 4, 4)
                 .addComponent(jLabel4)
@@ -242,10 +245,26 @@ public class RegistroReqCo extends javax.swing.JFrame {
 
     private void btnRegistrarReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarReqActionPerformed
         // TODO add your handling code here:
+        try {
+            Controlador.ConRegistroReqCo.RegistrarReq(txtCodigoCurso.getText().trim(), txtCodigoReq.getText().trim());
+
+            txtCodigoCurso.setText("");
+            txtCodigoReq.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Por favor revise los datos ingresados.");
+        }
     }//GEN-LAST:event_btnRegistrarReqActionPerformed
 
     private void btnRegistrarCoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCoActionPerformed
         // TODO add your handling code here:
+         try {
+            Controlador.ConRegistroReqCo.RegistrarCo(txtCodigoCurso.getText().trim(), txtCodigoCo.getText().trim());
+
+            txtCodigoCurso.setText("");
+            txtCodigoCo.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Por favor revise los datos ingresados.");
+        }
     }//GEN-LAST:event_btnRegistrarCoActionPerformed
 
 //    /**
@@ -275,9 +294,9 @@ public class RegistroReqCo extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtCodEscuela;
-    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtCodPlan;
     private javax.swing.JTextField txtCodigoCo;
+    private javax.swing.JTextField txtCodigoCurso;
     private javax.swing.JTextField txtCodigoReq;
     // End of variables declaration//GEN-END:variables
 
