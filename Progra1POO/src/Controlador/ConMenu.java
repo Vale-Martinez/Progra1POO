@@ -1,6 +1,6 @@
 package Controlador;
 
-import Vistas.RegistroBloque;
+import Vistas.ConsultaPlan;
 import Vistas.RegistroCurso;
 import Vistas.RegistroEscuela;
 import Vistas.RegistroPlanEstudio;
@@ -15,9 +15,10 @@ public class ConMenu {
 
     static Vistas.RegistroEscuela registroEscuela = new RegistroEscuela();
     static Vistas.RegistroPlanEstudio registroPlanEstudio = new RegistroPlanEstudio();
-    static Vistas.RegistroBloque registroBloque = new RegistroBloque();
     static Vistas.RegistroCurso registroCurso = new RegistroCurso();
     static Vistas.RegistroReqCo registroReqCo = new RegistroReqCo();
+    
+    static Vistas.ConsultaPlan consultaPlan = new ConsultaPlan();
     
        
     public static void AbrirResgistroEscuela() {
@@ -28,9 +29,6 @@ public class ConMenu {
         registroPlanEstudio.setVisible(true);
     }
 
-    public static void AbrirResgistroBloque() {
-        registroBloque.setVisible(true);
-    }
     
     public static void AbrirResgistroCurso() {
         registroCurso.setVisible(true);
@@ -38,5 +36,10 @@ public class ConMenu {
     
     public static void AbrirResgistroReqCo() {
         registroReqCo.setVisible(true);
+    }
+    
+    
+    public static void AbrirConsultaPlan(){
+    consultaPlan.setVisible(true);
     }
 }

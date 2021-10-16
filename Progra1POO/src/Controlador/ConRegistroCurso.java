@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Curso;
 import Vistas.Menu;
 
 /**
@@ -16,10 +17,10 @@ public class ConRegistroCurso {
         Controlador.ConMenu.registroCurso.setVisible(false);
     }
     
-    public static void Registrar(int numeroBloque, String codigoCurso, String nombreCurso, int creditos, int horasLectivas) {
-        String consulta1 = "Insert into Curso (codigoCurso, nombreCurso, creditos, horasLectivas) values ('" + codigoCurso + "','" + nombreCurso + "',"+creditos +","+horasLectivas+");";
+    public static void Registrar(int numPlan, Curso cur) {
+        String consulta1 = "Insert into Curso (codigoCurso, nombreCurso, bloque,creditos, horasLectivas) values ('" + cur.getCodigoCurso() + "','" + cur.getNombreCurso() + "',"+cur.getBloque()+","+cur.getCreditosCurso() +","+cur.getHorasLectivas()+");";
         Modelo.ConexionSQL.consultaRegistar(consulta1);
-        String consulta2 = "Insert into Bloque_Curso (numeroBloque, codigoCurso) values (" + numeroBloque + ",'" +codigoCurso + "');";
+        String consulta2 = "Insert into PlanEstudio_Curso (numPlan, codigoCurso ) values (" + numPlan + ",'" +cur.getCodigoCurso() + "');";
         Modelo.ConexionSQL.consultaRegistar(consulta2);
     }
 }

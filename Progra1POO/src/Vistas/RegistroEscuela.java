@@ -1,5 +1,8 @@
 package Vistas;
 
+import Modelo.Escuela;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author valem
@@ -139,11 +142,17 @@ public class RegistroEscuela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarActionPerformed
-        Controlador.ConRegistroEscuela.Registrar(txtCodigo.getText().trim(), txtNombre.getText());
+        try {
+            Escuela e1 = new Escuela(txtCodigo.getText().trim(), txtNombre.getText());
+            Controlador.ConRegistroEscuela.Registrar(e1);
 
-        //limpia los campos luego de resgistar
-        txtCodigo.setText("");
-        txtNombre.setText("");
+            //limpia los campos luego de resgistar
+            txtCodigo.setText("");
+            txtNombre.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Por favor revise los datos ingresados.");
+
+        }
 
 
     }//GEN-LAST:event_btnRegistarActionPerformed

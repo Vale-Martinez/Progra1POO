@@ -1,7 +1,7 @@
 package Controlador;
 
 import Vistas.Menu;
-
+import Modelo.Escuela;
 /**
  *
  * @author valem
@@ -16,8 +16,8 @@ public class ConRegistroEscuela {
         Controlador.ConMenu.registroEscuela.setVisible(false);
     }
 
-    public static void Registrar(String codigoEscuela, String nombreEscuela) {
-        String consulta = "Insert into Escuela (codigoEscuela, nombreEscuela) VALUES ('" + codigoEscuela + "','" + nombreEscuela + "');";
+    public static void Registrar(Escuela esc) {
+        String consulta = "Insert into Escuela (codigoEscuela, nombreEscuela) VALUES ('" + esc.getCodigoEscuela() + "','" + esc.getNombreEscuela() + "');";
         Modelo.ConexionSQL.consultaRegistar(consulta);
     }
 }

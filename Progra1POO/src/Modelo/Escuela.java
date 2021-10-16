@@ -36,10 +36,13 @@ public class Escuela {
         this.codigoEscuela = codigoEscuela;
     }
 
-    public Escuela(String nombreEscuela, String codigoEscuela) {
+    public Escuela(String codigoEscuela, String nombreEscuela) {
         this.nombreEscuela = nombreEscuela;
         this.codigoEscuela = codigoEscuela;
         this.planes = null;
+    }
+
+    public Escuela() {
     }
 
     

@@ -17,7 +17,7 @@ public class ConRegistroReqCo {
         Controlador.ConMenu.registroReqCo.setVisible(false);
     }
     
-    public static void RegistrarReq(String codigoCurso, String codigoCursoReq ) {
+    public static void RegistrarReq(String codigoCurso, String codigoCursoReq) {
         String consulta1 = "Insert into Curso_Requisito(codigoCurso, codigoCursoReq ) values ('" + codigoCurso + "','" + codigoCursoReq + "');";
         Modelo.ConexionSQL.consultaRegistar(consulta1);
     }

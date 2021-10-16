@@ -64,9 +64,6 @@ public class ConexionSQL {
             
             PreparedStatement prepsInsertProduct = con.prepareStatement(consulta, Statement.RETURN_GENERATED_KEYS);
             prepsInsertProduct.execute();
-            
-//            declara = con.createStatement();
-//            ResultSet respuesta = declara.executeQuery(consulta);
             JOptionPane.showMessageDialog(null, "Los datos han sido agregados correctamente");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error" + e.getMessage(), "Error conexion ", JOptionPane.ERROR_MESSAGE);

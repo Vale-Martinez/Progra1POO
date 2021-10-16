@@ -10,6 +10,7 @@ public class Curso {
 
     private String nombreCurso;
     private String codigoCurso;
+    private int bloque;
     private int creditosCurso;
     private int horasLectivas;
     private ArrayList<Curso> requisitos;
@@ -29,6 +30,14 @@ public class Curso {
 
     public void setCodigoCurso(String codigoCurso) {
         this.codigoCurso = codigoCurso;
+    }
+
+    public int getBloque() {
+        return bloque;
+    }
+
+    public void setBloque(int bloque) {
+        this.bloque = bloque;
     }
 
     public int getCreditosCurso() {
@@ -63,14 +72,16 @@ public class Curso {
         this.correquisito = correquisito;
     }
 
-    public Curso(String nombreCurso, String codigoCurso, int creditosCurso, int horasLectivas) {
+    public Curso(String nombreCurso, String codigoCurso, int bloque, int creditosCurso, int horasLectivas) {
         this.nombreCurso = nombreCurso;
         this.codigoCurso = codigoCurso;
+        this.bloque = bloque;
         this.creditosCurso = creditosCurso;
         this.horasLectivas = horasLectivas;
         this.requisitos = null;
         this.correquisito = null;
     }
-    
+
+
     
 }

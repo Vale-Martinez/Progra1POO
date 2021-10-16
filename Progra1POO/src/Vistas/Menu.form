@@ -25,14 +25,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistrarPlanEstudioActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="RegistarBloque">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Registar Bloque"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistarBloqueActionPerformed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="RegistarCurso">
               <Properties>
                 <Property name="label" type="java.lang.String" value="Registar Curso"/>
@@ -60,6 +52,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar plan de estudio"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConsultarPlanEstudioActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="ConsultarCursoPlan">
               <Properties>

@@ -1,6 +1,7 @@
 package Vistas;
 
 import java.sql.Date;
+import Modelo.Curso;
 import javax.swing.JOptionPane;
 
 /**

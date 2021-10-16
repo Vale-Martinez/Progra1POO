@@ -1,7 +1,8 @@
 package Modelo;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.sql.Date;
+
+
 
 /**
  *
@@ -10,8 +11,8 @@ import java.util.ArrayList;
 public class PlanEstudio {
 
     private int numPlan;
-    private LocalDate fechaVigencia;
-    private ArrayList<Bloque> bloques;
+    private Date fechaVigencia;
+
 
     public int getNumPlan() {
         return numPlan;
@@ -21,26 +22,18 @@ public class PlanEstudio {
         this.numPlan = numPlan;
     }
 
-    public LocalDate getFechaVigencia() {
+    public Date getFechaVigencia() {
         return fechaVigencia;
     }
 
-    public void setFechaVigencia(LocalDate fechaVigencia) {
+    public void setFechaVigencia(Date fechaVigencia) {
         this.fechaVigencia = fechaVigencia;
     }
 
-    public ArrayList<Bloque> getBloques() {
-        return bloques;
-    }
 
-    public void setBloques(ArrayList<Bloque> bloques) {
-        this.bloques = bloques;
-    }
-
-    public PlanEstudio(int numPlan, LocalDate fechaVigencia) {
+    public PlanEstudio(int numPlan, Date fechaVigencia) {
         this.numPlan = numPlan;
         this.fechaVigencia = fechaVigencia;
-        this.bloques = null;
     }
 
     

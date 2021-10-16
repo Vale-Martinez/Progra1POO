@@ -1,5 +1,6 @@
 package Vistas;
 
+import Modelo.PlanEstudio;
 import java.sql.Date;
 import javax.swing.JOptionPane;
 
@@ -168,8 +169,10 @@ public class RegistroPlanEstudio extends javax.swing.JFrame {
 
     private void btnRegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarActionPerformed
         // TODO add your handling code here:.
+        
         try {
-            Controlador.ConRegistroPlanEstudio.Registrar(txtCodEscuela.getText().trim(), Integer.parseInt(txtNumero.getText().trim()), Date.valueOf(txtfecha.getText().trim()));
+            PlanEstudio PE = new PlanEstudio(Integer.parseInt(txtNumero.getText().trim()), Date.valueOf(txtfecha.getText().trim()));
+            Controlador.ConRegistroPlanEstudio.Registrar(txtCodEscuela.getText().trim(), PE);
 
             txtCodEscuela.setText("");
             txtNumero.setText("");
