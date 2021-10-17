@@ -60,11 +60,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Conusltar cursos en plan de estudio"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConsultarCursoPlanActionPerformed"/>
+              </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="ConsultarReqCo">
+            <MenuItem class="javax.swing.JMenuItem" name="ConsultarReq">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Consultar Requisito o Corequisito"/>
+                <Property name="text" type="java.lang.String" value="Consultar requisito"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConsultarReqActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="ConsultarCo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consulta correquisito"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConsultarCoActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -80,7 +94,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="EliminarCursoPlan">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Eliminar Curso de un plan de estudios"/>
+                <Property name="text" type="java.lang.String" value="Eliminar curso de un plan de estudios"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EliminarCursoPlanActionPerformed"/>
@@ -88,7 +102,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="EliminarCurso">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Eliminar Curso"/>
+                <Property name="text" type="java.lang.String" value="Eliminar curso"/>
               </Properties>
             </MenuItem>
           </SubComponents>

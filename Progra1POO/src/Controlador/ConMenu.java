@@ -1,5 +1,8 @@
 package Controlador;
 
+import Vistas.ConsultaCursoCo;
+import Vistas.ConsultaCursoPlan;
+import Vistas.ConsultaCursoReq;
 import Vistas.ConsultaPlan;
 import Vistas.RegistroCurso;
 import Vistas.RegistroEscuela;
@@ -17,29 +20,41 @@ public class ConMenu {
     static Vistas.RegistroPlanEstudio registroPlanEstudio = new RegistroPlanEstudio();
     static Vistas.RegistroCurso registroCurso = new RegistroCurso();
     static Vistas.RegistroReqCo registroReqCo = new RegistroReqCo();
-    
+
     static Vistas.ConsultaPlan consultaPlan = new ConsultaPlan();
-    
-       
+    static Vistas.ConsultaCursoPlan consultaCursoPlan = new ConsultaCursoPlan();
+    static Vistas.ConsultaCursoReq consultarCursoReq = new ConsultaCursoReq();
+    static Vistas.ConsultaCursoCo consultarCursoCo = new ConsultaCursoCo();
+
     public static void AbrirResgistroEscuela() {
         registroEscuela.setVisible(true);
     }
-    
+
     public static void AbrirResgistroPlanEstudio() {
         registroPlanEstudio.setVisible(true);
     }
 
-    
     public static void AbrirResgistroCurso() {
         registroCurso.setVisible(true);
     }
-    
+
     public static void AbrirResgistroReqCo() {
         registroReqCo.setVisible(true);
     }
-    
-    
-    public static void AbrirConsultaPlan(){
-    consultaPlan.setVisible(true);
+
+    public static void AbrirConsultaPlan() {
+        consultaPlan.setVisible(true);
+    }
+
+    public static void AbrirConsultaCursoPlan() {
+        consultaCursoPlan.setVisible(true);
+    }
+
+    public static void AbrirConsultaCursoReq() {
+        consultarCursoReq.setVisible(true);
+    }
+
+    public static void AbrirConsultaCursoCo() {
+        consultarCursoCo.setVisible(true);
     }
 }

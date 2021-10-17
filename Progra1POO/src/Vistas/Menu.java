@@ -32,7 +32,8 @@ public class Menu extends javax.swing.JFrame {
         Consultar = new javax.swing.JMenu();
         ConsultarPlanEstudio = new javax.swing.JMenuItem();
         ConsultarCursoPlan = new javax.swing.JMenuItem();
-        ConsultarReqCo = new javax.swing.JMenuItem();
+        ConsultarReq = new javax.swing.JMenuItem();
+        ConsultarCo = new javax.swing.JMenuItem();
         Modificadores = new javax.swing.JMenu();
         EliminarReq = new javax.swing.JMenuItem();
         EliminarCursoPlan = new javax.swing.JMenuItem();
@@ -95,10 +96,28 @@ public class Menu extends javax.swing.JFrame {
         Consultar.add(ConsultarPlanEstudio);
 
         ConsultarCursoPlan.setText("Conusltar cursos en plan de estudio");
+        ConsultarCursoPlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConsultarCursoPlanActionPerformed(evt);
+            }
+        });
         Consultar.add(ConsultarCursoPlan);
 
-        ConsultarReqCo.setText("Consultar Requisito o Corequisito");
-        Consultar.add(ConsultarReqCo);
+        ConsultarReq.setText("Consultar requisito");
+        ConsultarReq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConsultarReqActionPerformed(evt);
+            }
+        });
+        Consultar.add(ConsultarReq);
+
+        ConsultarCo.setText("Consulta correquisito");
+        ConsultarCo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConsultarCoActionPerformed(evt);
+            }
+        });
+        Consultar.add(ConsultarCo);
 
         jMenuBar1.add(Consultar);
 
@@ -107,7 +126,7 @@ public class Menu extends javax.swing.JFrame {
         EliminarReq.setText("Eliminar un requisito");
         Modificadores.add(EliminarReq);
 
-        EliminarCursoPlan.setText("Eliminar Curso de un plan de estudios");
+        EliminarCursoPlan.setText("Eliminar curso de un plan de estudios");
         EliminarCursoPlan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EliminarCursoPlanActionPerformed(evt);
@@ -115,7 +134,7 @@ public class Menu extends javax.swing.JFrame {
         });
         Modificadores.add(EliminarCursoPlan);
 
-        EliminarCurso.setText("Eliminar Curso");
+        EliminarCurso.setText("Eliminar curso");
         Modificadores.add(EliminarCurso);
 
         jMenuBar1.add(Modificadores);
@@ -188,6 +207,22 @@ public class Menu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_ConsultarPlanEstudioActionPerformed
 
+    private void ConsultarCursoPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarCursoPlanActionPerformed
+        Controlador.ConMenu.AbrirConsultaCursoPlan();
+        this.dispose();
+    }//GEN-LAST:event_ConsultarCursoPlanActionPerformed
+
+    private void ConsultarCoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarCoActionPerformed
+        Controlador.ConMenu.AbrirConsultaCursoCo();
+        this.dispose();
+    }//GEN-LAST:event_ConsultarCoActionPerformed
+
+    private void ConsultarReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarReqActionPerformed
+        // TODO add your handling code here:
+        Controlador.ConMenu.AbrirConsultaCursoReq();
+        this.dispose();
+    }//GEN-LAST:event_ConsultarReqActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -225,9 +260,10 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Consultar;
+    private javax.swing.JMenuItem ConsultarCo;
     private javax.swing.JMenuItem ConsultarCursoPlan;
     private javax.swing.JMenuItem ConsultarPlanEstudio;
-    private javax.swing.JMenuItem ConsultarReqCo;
+    private javax.swing.JMenuItem ConsultarReq;
     private javax.swing.JMenuItem EliminarCurso;
     private javax.swing.JMenuItem EliminarCursoPlan;
     private javax.swing.JMenuItem EliminarReq;

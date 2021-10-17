@@ -25,5 +25,7 @@ public class ConRegistroReqCo {
     public static void RegistrarCo(String codigoCurso, String codigoCursoCo) {
         String consulta1 = "Insert into Curso_Correqisito(codigoCurso, codigoCursoCO) values ('" + codigoCurso + "','" + codigoCursoCo + "');";
         Modelo.ConexionSQL.consultaRegistar(consulta1);
+        String consulta2 = "Insert into Curso_Correqisito(codigoCurso, codigoCursoCO) values ('" + codigoCursoCo + "','" + codigoCurso + "');";
+        Modelo.ConexionSQL.consultaRegistar(consulta2);
     }
 }
