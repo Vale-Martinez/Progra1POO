@@ -9,8 +9,9 @@ import javax.swing.JOptionPane;
 import java.sql.*;
 
 /**
- *
+ * Clase de conexion entre la base de datos SQL con el programa
  * @author valem
+ * @author nathb
  */
 public class ConexionSQL {
 
@@ -20,7 +21,11 @@ public class ConexionSQL {
     public static String contra;
     public static boolean status = false;
 
-    //Funcion que realiza la conexion con la base de datos 
+
+    /**
+     *Funcion que realiza la conexion con la base de datos 
+     * @return el contacto con la base de datos
+     */
     public static Connection getConexion() {
         status = false;
         String url = "jdbc:sqlserver://Valeria-Martinez:1433;databaseName=Progra1POO"; //cambiar nombre del hostname de la computadora para que funcione 
@@ -40,8 +45,12 @@ public class ConexionSQL {
         return contacto;
     }
 
-    //funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
-    //todas las filas que cumplan con esa consulta, si algo sale mal retona null
+    /**
+     *Funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
+     * todas las filas que cumplan con esa consulta, si algo sale mal retona null
+     * @param consulta como si fuera sql
+     * @return el resultado de la consulta
+     */
     public static ResultSet consulta(String consulta) {
         Connection con = getConexion();
         Statement declara;
@@ -55,8 +64,13 @@ public class ConexionSQL {
         return null;
     }
 
-    //funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
-    //todas las filas que cumplan con esa consulta, si algo sale mal retona null
+    
+
+    /**
+     *funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
+     * todas las filas que cumplan con esa consulta, si algo sale mal retona null
+     * @param consulta como si fuera sql
+     */
     public static void consultaRegistar(String consulta) {
         Connection con = getConexion();
         try {
@@ -70,9 +84,12 @@ public class ConexionSQL {
 
     }
     
-    
-     //funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
-    //todas las filas que cumplan con esa consulta, si algo sale mal retona null
+
+    /**
+     *funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
+     * todas las filas que cumplan con esa consulta, si algo sale mal retona null
+     * @param consulta com si fuera sql
+     */
     public static void consultaEliminiar(String consulta) {
         Connection con = getConexion();
         try {

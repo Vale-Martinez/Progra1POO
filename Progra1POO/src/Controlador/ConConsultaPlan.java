@@ -27,8 +27,10 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
+ * Clase controlador de la vista consultar correquisto de un plan
  *
  * @author valem
+ * @author nathb
  */
 public class ConConsultaPlan {
 
@@ -38,12 +40,20 @@ public class ConConsultaPlan {
     static int numPlanC, totalCreditosC, totalCursosC;
     static String codigoEscC;
 
-    //llama a la ventana anterior 
+    /**
+     * llama a la ventana anterior
+     */
     public static void Regresar() {
         menu.setVisible(true);
         Controlador.ConMenu.consultaPlan.setVisible(false);
     }
 
+    /**
+     * realiza y muestra la consulta de un plan
+     *
+     * @param numPlan numero del plan que se desea consultar
+     * @param codigoEsc codigo de la escuela a la que pertenece
+     */
     public static void ConsultarPlan(int numPlan, String codigoEsc) {
         try {
             numPlanC = numPlan;
@@ -98,6 +108,9 @@ public class ConConsultaPlan {
 
     }
 
+    /**
+     * abrela la vista de enviar el PDF
+     */
     public static void AbrirEnviarPDF() {
         envioPDF.setVisible(true);
     }
@@ -206,11 +219,16 @@ public class ConConsultaPlan {
         return true;
     }
 
+    /**
+     * realiza el envio de del plan por corre
+     *
+     * @param Email correo electronico al que se desea enviar
+     */
     public static void Envio(String Email) {
         try {
             String PATH = Crearpdf();
             EnviarCorreo(Email, PATH);
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(ConConsultaPlan.class.getName()).log(Level.SEVERE, null, ex);
         }

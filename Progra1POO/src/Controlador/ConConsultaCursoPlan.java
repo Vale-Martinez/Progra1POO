@@ -7,19 +7,28 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
+ * Clase controlador de la vista consultar plan de un curso
  *
  * @author valem
+ * @author nathb
  */
 public class ConConsultaCursoPlan {
 
     static Vistas.Menu menu = new Menu();
 
-    //llama a la ventana anterior 
+    /**
+     * llama a la ventana anterior
+     */
     public static void Regresar() {
         menu.setVisible(true);
         Controlador.ConMenu.consultaPlan.setVisible(false);
     }
 
+    /**
+     * realiza y muestra la consulta de ub plan de un curso
+     *
+     * @param codCurso del que se desea saber el plan
+     */
     public static void ConsultarCurso(String codCurso) {
         try {
             DefaultTableModel model = (DefaultTableModel) Vistas.ConsultaCursoPlan.tblConsultaCurso.getModel();
@@ -41,7 +50,7 @@ public class ConConsultaCursoPlan {
                 v.add(res.getDate(2));
                 v.add(res.getString(3));
                 model.addRow(v);
-               Vistas.ConsultaCursoPlan.tblConsultaCurso.setModel(model);
+                Vistas.ConsultaCursoPlan.tblConsultaCurso.setModel(model);
             }
 
         } catch (Exception e) {

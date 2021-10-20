@@ -3,6 +3,7 @@ package Vistas;
 /**
  *
  * @author valem
+ * @author nathb
  */
 public class Menu extends javax.swing.JFrame {
 

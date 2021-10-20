@@ -7,19 +7,28 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
+ * Clase controlador de la vista consultar requisto de un curso
  *
  * @author valem
+ * @author nathb
  */
 public class ConConsultaCursoReq {
 
     static Vistas.Menu menu = new Menu();
 
-    //llama a la ventana anterior 
+    /**
+     * llama a la ventana anterior
+     */
     public static void Regresar() {
         menu.setVisible(true);
         Controlador.ConMenu.consultaPlan.setVisible(false);
     }
 
+    /**
+     * realiza y muestra la consulta de un requisito de un curso
+     *
+     * @param codCurso codigo del curso que se desea consultar
+     */
     public static void ConsultarReq(String codCurso) {
         try {
             DefaultTableModel model = (DefaultTableModel) Vistas.ConsultaCursoReq.tblConsultaCurso.getModel();

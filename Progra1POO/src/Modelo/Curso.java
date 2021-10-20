@@ -3,8 +3,10 @@ package Modelo;
 import java.util.ArrayList;
 
 /**
+ * Clase modelo de los obejtos curso
  *
  * @author valem
+ * @author nathb
  */
 public class Curso {
 
@@ -72,6 +74,16 @@ public class Curso {
         this.correquisito = correquisito;
     }
 
+    /**
+     * Constructor de la clase
+     *
+     * @param nombreCurso nombr del curso
+     * @param codigoCurso codigo del curso esta compuesto por dos letras y
+     * cuatro numeros
+     * @param bloque numero de bloque al que pertenece
+     * @param creditosCurso cantidad de creditos de 0 a 4
+     * @param horasLectivas horas lectivas, un valor numero de entre 1 y 5
+     */
     public Curso(String nombreCurso, String codigoCurso, int bloque, int creditosCurso, int horasLectivas) {
         this.nombreCurso = nombreCurso;
         this.codigoCurso = codigoCurso;
@@ -82,6 +94,28 @@ public class Curso {
         this.correquisito = null;
     }
 
+    /**
+     *Agrega un curso como requisito de otro
+     * @param requisito curso que sera requisto
+     */
+    public void AgregarRequisito(Curso requisito) {
+        requisitos.add(requisito);
+    }
 
+    /**
+     *elimina un curso como requisito de otro
+     * @param requisito curso que sera requisto
+     */
+    public void EliminarRequisito(Curso requisito) {
+        requisitos.remove(requisito);
+    }
     
+    /**
+     *Agrega un curso como correquisito de otro
+     * @param correquisito curso que sera requisto
+     */
+    public void AgregarCorrequisito(Curso correquisito) {
+        requisitos.add(correquisito);
+    }
+
 }
