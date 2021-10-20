@@ -63,7 +63,7 @@ public class RegistroEscuela extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel4.setText("El código de la escuela debe ser un elemento de dos caracteres.");
+        jLabel4.setText("(El código de la escuela debe ser un elemento de dos caracteres.)");
 
         jMenu2.setText("Salir");
 

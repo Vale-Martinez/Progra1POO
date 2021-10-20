@@ -68,7 +68,7 @@ public class RegistroPlanEstudio extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel4.setText("El código del plan debe ser un numero de cuatro digitos.");
+        jLabel4.setText("(El código del plan debe ser un numero de cuatro digitos.)");
 
         txtfecha.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
 
@@ -77,7 +77,7 @@ public class RegistroPlanEstudio extends javax.swing.JFrame {
         jLabel5.setToolTipText("");
 
         jLabel6.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
-        jLabel6.setText("La fecha de ser escrita con el formato yyyy-mm-dd. ");
+        jLabel6.setText("(La fecha de ser escrita con el formato yyyy-mm-dd. )");
 
         jMenu2.setText("Salir");
 

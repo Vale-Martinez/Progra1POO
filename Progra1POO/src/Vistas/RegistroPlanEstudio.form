@@ -185,7 +185,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="12" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="El c&#xf3;digo del plan debe ser un numero de cuatro digitos."/>
+        <Property name="text" type="java.lang.String" value="(El c&#xf3;digo del plan debe ser un numero de cuatro digitos.)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtfecha">
@@ -209,7 +209,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Leelawadee UI Semilight" size="12" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="La fecha de ser escrita con el formato yyyy-mm-dd. "/>
+        <Property name="text" type="java.lang.String" value="(La fecha de ser escrita con el formato yyyy-mm-dd. )"/>
       </Properties>
     </Component>
   </SubComponents>
