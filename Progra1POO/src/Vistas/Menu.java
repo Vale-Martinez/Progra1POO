@@ -124,6 +124,11 @@ public class Menu extends javax.swing.JFrame {
         Modificadores.setText("Modificadores");
 
         EliminarReq.setText("Eliminar un requisito");
+        EliminarReq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarReqActionPerformed(evt);
+            }
+        });
         Modificadores.add(EliminarReq);
 
         EliminarCursoPlan.setText("Eliminar curso de un plan de estudios");
@@ -135,6 +140,11 @@ public class Menu extends javax.swing.JFrame {
         Modificadores.add(EliminarCursoPlan);
 
         EliminarCurso.setText("Eliminar curso");
+        EliminarCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarCursoActionPerformed(evt);
+            }
+        });
         Modificadores.add(EliminarCurso);
 
         jMenuBar1.add(Modificadores);
@@ -175,7 +185,8 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EliminarCursoPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarCursoPlanActionPerformed
-        // TODO add your handling code here:
+       Controlador.ConMenu.AbrirEliminarCursoPlan();
+       this.dispose();
     }//GEN-LAST:event_EliminarCursoPlanActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -218,10 +229,19 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_ConsultarCoActionPerformed
 
     private void ConsultarReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarReqActionPerformed
-        // TODO add your handling code here:
         Controlador.ConMenu.AbrirConsultaCursoReq();
         this.dispose();
     }//GEN-LAST:event_ConsultarReqActionPerformed
+
+    private void EliminarReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarReqActionPerformed
+        Controlador.ConMenu.AbrirEliminarCursoReq();
+        this.dispose();
+    }//GEN-LAST:event_EliminarReqActionPerformed
+
+    private void EliminarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarCursoActionPerformed
+        Controlador.ConMenu.AbrirEliminarCurso();
+        this.dispose();
+    }//GEN-LAST:event_EliminarCursoActionPerformed
 
     /**
      * @param args the command line arguments

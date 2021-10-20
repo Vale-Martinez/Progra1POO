@@ -91,6 +91,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Eliminar un requisito"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EliminarReqActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="EliminarCursoPlan">
               <Properties>
@@ -104,6 +107,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Eliminar curso"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EliminarCursoActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

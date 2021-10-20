@@ -170,7 +170,7 @@ public class ConConsultaPlan {
         });
 
         // Crear el email
-        MimeMessage msg = new MimeMessage(session);
+        Message msg = new MimeMessage(session);
         try {
             msg.setFrom(new InternetAddress("no-reply@gmail.com"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));

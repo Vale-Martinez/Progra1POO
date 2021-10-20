@@ -4,10 +4,10 @@ package Vistas;
  *
  * @author valem
  */
-public class EnvioPDF extends javax.swing.JFrame {
+public class EliminarCursoPlan extends javax.swing.JFrame {
 
     /** Creates new form EnvioPDF */
-    public EnvioPDF() {
+    public EliminarCursoPlan() {
         initComponents();
     }
 
@@ -22,8 +22,10 @@ public class EnvioPDF extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
+        txtCodCurso = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        txtNumPlan = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -33,22 +35,28 @@ public class EnvioPDF extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Envio de PDF por correo electrónico");
+        jLabel1.setText("Eliminar un curso de un plan");
         jLabel1.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
-        jLabel2.setText("Email al que desea enviar el PDF:");
+        jLabel2.setText("Codigo del curso que desea eliminar :");
         jLabel2.setToolTipText("");
 
-        txtEmail.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
+        txtCodCurso.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 11)); // NOI18N
-        jButton1.setText("Enviar");
+        jButton1.setText("Eliminar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
+        jLabel3.setText("Codigo del plan del que lo desea eliminar:");
+        jLabel3.setToolTipText("");
+
+        txtNumPlan.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 14)); // NOI18N
 
         jMenu2.setText("Salir");
 
@@ -80,11 +88,14 @@ public class EnvioPDF extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtCodCurso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumPlan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -98,7 +109,11 @@ public class EnvioPDF extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtNumPlan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1)
                 .addGap(19, 19, 19))
@@ -110,13 +125,14 @@ public class EnvioPDF extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Controlador.ConConsultaPlan.Envio(txtEmail.getText().trim());
-        txtEmail.setText("");
+        Controlador.ConEliminarCursoPlan.Eliminar(txtCodCurso.getText().trim(),Integer.parseInt(txtNumPlan.getText().trim()) );
+        txtCodCurso.setText("");
+        txtNumPlan.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         //llama a la funcion en controlador
-        Controlador.ConConsultaPlan.Regresar();
+        Controlador.ConEliminarCursoPlan.Regresar();
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -163,11 +179,13 @@ public class EnvioPDF extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtCodCurso;
+    private javax.swing.JTextField txtNumPlan;
     // End of variables declaration//GEN-END:variables
 
 }

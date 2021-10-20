@@ -59,12 +59,27 @@ public class ConexionSQL {
     //todas las filas que cumplan con esa consulta, si algo sale mal retona null
     public static void consultaRegistar(String consulta) {
         Connection con = getConexion();
-        Statement declara;
         try {
             
             PreparedStatement prepsInsertProduct = con.prepareStatement(consulta, Statement.RETURN_GENERATED_KEYS);
             prepsInsertProduct.execute();
             JOptionPane.showMessageDialog(null, "Los datos han sido agregados correctamente");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error" + e.getMessage(), "Error conexion ", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }
+    
+    
+     //funcion que realiza la consulta a la base de datos, recibe un string con la consula como si fuera en sql y devuelve 
+    //todas las filas que cumplan con esa consulta, si algo sale mal retona null
+    public static void consultaEliminiar(String consulta) {
+        Connection con = getConexion();
+        try {
+            
+            PreparedStatement prepsInsertProduct = con.prepareStatement(consulta, Statement.RETURN_GENERATED_KEYS);
+            prepsInsertProduct.execute();
+            JOptionPane.showMessageDialog(null, "Los datos han sido eliminados correctamente");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Error" + e.getMessage(), "Error conexion ", JOptionPane.ERROR_MESSAGE);
         }

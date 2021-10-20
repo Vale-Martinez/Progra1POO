@@ -4,6 +4,9 @@ import Vistas.ConsultaCursoCo;
 import Vistas.ConsultaCursoPlan;
 import Vistas.ConsultaCursoReq;
 import Vistas.ConsultaPlan;
+import Vistas.EliminarCurso;
+import Vistas.EliminarCursoPlan;
+import Vistas.EliminarCursoReq;
 import Vistas.RegistroCurso;
 import Vistas.RegistroEscuela;
 import Vistas.RegistroPlanEstudio;
@@ -25,6 +28,10 @@ public class ConMenu {
     static Vistas.ConsultaCursoPlan consultaCursoPlan = new ConsultaCursoPlan();
     static Vistas.ConsultaCursoReq consultarCursoReq = new ConsultaCursoReq();
     static Vistas.ConsultaCursoCo consultarCursoCo = new ConsultaCursoCo();
+
+    static Vistas.EliminarCursoReq eliminarCursoReq = new EliminarCursoReq();
+    static Vistas.EliminarCursoPlan eliminarCursoPlan = new EliminarCursoPlan();
+    static Vistas.EliminarCurso eliminarCurso = new EliminarCurso();
 
     public static void AbrirResgistroEscuela() {
         registroEscuela.setVisible(true);
@@ -56,5 +63,17 @@ public class ConMenu {
 
     public static void AbrirConsultaCursoCo() {
         consultarCursoCo.setVisible(true);
+    }
+
+    public static void AbrirEliminarCursoReq() {
+        eliminarCursoReq.setVisible(true);
+    }
+
+    public static void AbrirEliminarCursoPlan() {
+        eliminarCursoPlan.setVisible(true);
+    }
+
+    public static void AbrirEliminarCurso() {
+        eliminarCurso.setVisible(true);
     }
 }
